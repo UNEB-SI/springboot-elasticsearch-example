@@ -1,4 +1,4 @@
-package br.com.lpr;
+package br.com.lpr.api;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
