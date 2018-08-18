@@ -1,0 +1,4 @@
+rootProject.name = 'springboot-elasticsearch-example'
+
+include 'api'
+include 'core'
