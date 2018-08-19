@@ -19,7 +19,7 @@ public class PublicacaoIndexacaoService {
 
     private static final Logger LOGGER = LoggerFactory.getLogger(PublicacaoIndexacaoService.class);
     @Autowired
-    private ElasticsearchTemplate elasticTemplate;
+    private ElasticsearchTemplate thisElasticsearchTemplate;
 
     public void indexar(PublicacaoElasticDTO publicacaoAttached) {
 
@@ -27,7 +27,7 @@ public class PublicacaoIndexacaoService {
             IndexQuery indexQuery = new IndexQueryBuilder().withIndexName(ELASTICSEARCH_INDEX_NAME)
                     .withObject(publicacaoAttached).withType(ELASTICSEARCH_TYPE_NAME).withId(publicacaoAttached.getId().toString())
                     .build();
-            elasticTemplate.index(indexQuery);
+            thisElasticsearchTemplate.index(indexQuery);
         }
         LOGGER.info("Finalizando o processamento de indexação da publicação: {} em: {}", publicacaoAttached.getId(), new Date());
     }

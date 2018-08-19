@@ -4,14 +4,18 @@ import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import org.springframework.data.elasticsearch.annotations.Document;
 
-import java.time.LocalDateTime;
 import java.util.List;
+
+import static br.com.lpr.core.util.ConstantsUtil.ELASTICSEARCH_INDEX_NAME;
+import static br.com.lpr.core.util.ConstantsUtil.ELASTICSEARCH_TYPE_NAME;
 
 @Data
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
+@Document(indexName = ELASTICSEARCH_INDEX_NAME, type = ELASTICSEARCH_TYPE_NAME)
 public class PublicacaoElasticDTO {
     private Long id;
     private String titulo;
