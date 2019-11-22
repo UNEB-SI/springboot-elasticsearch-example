@@ -15,6 +15,9 @@ public class PublicacaoElasticsearchController {
     @Autowired
     private PublicacaoService publicacaoService;
 
+    private String atributoTeste;
+
+
     @RequestMapping(value="/indexar",  method = RequestMethod.POST)
     public ResponseEntity<?> indexarPublicacao(){
             try {
