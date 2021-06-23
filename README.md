@@ -5,7 +5,7 @@ A idéia básica do projeto é indexar os trabalhos de conclusão de curso de um
 
 ## Tecnologias utilizadas no projeto:
 * Java 8
-* SpringBoot 2.1.0.BUILD-SNAPSHOT
+* SpringBoot 2.1.0.RELEASE
 * [Elasticsearch 6.3.1](https://www.elastic.co/downloads/elasticsearch)
 * Gradle
 * IntelliJ IDEA 2017
